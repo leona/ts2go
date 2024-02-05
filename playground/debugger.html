@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ts2go debugger</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.32.5/ace.min.js"
+    integrity="sha512-4jIkBpqqFqGrEbYKdA9em7OdCGyPlaximONDoUQ18wjw84zv7sUAqWLVb7pRjP5YyrWk0MDGFfom1zPUd6K+ng=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <link href="
+https://cdn.jsdelivr.net/npm/ace-builds@1.32.5/css/ace.min.css
+" rel="stylesheet">
+  <script src="
+https://cdn.jsdelivr.net/npm/diff2html@3.4.47/bundles/js/diff2html-ui.min.js
+"></script>
+  <link href="
+https://cdn.jsdelivr.net/npm/diff2html@3.4.47/bundles/css/diff2html.min.css
+" rel="stylesheet">
+</head>
+
+<body id="debugger" data-route="debugger">
+  <div id="app">
+    <div id="container">
+      <div class="main-section">
+        <div class="editor-section">
+          <div id="ts-editor" class="ts-editor editor"></div>
+          <div id="go-editor" class="editor"></div>
+        </div>
+        <div id="diff"></div>
+      </div>
+      <div class="log-section">
+        <div id="ts-input-ast" class="ts-editor editor"></div>
+        <div id="log-container" class="editor">
+          <ul></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="module" src="/src/main.ts"></script>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+{
+  "name": "frontend",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "resolutions": {
+    "rollup": "npm:@rollup/wasm-node"
+  },
+  "scripts": {
+    "dev:frontend": "vite dev --host --port 80",
+    "dev:server": "bun run --watch server.ts",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "sass": "^1.70.0",
+    "typescript": "^5.2.2",
+    "vite": "^5.0.8"
+  },
+  "optionalDependencies": {
+    "@rollup/rollup-linux-x64-gnu": "^4.9.6"
+  },
+  "dependencies": {
+    "@pgrabovets/json-view": "^2.7.5",
+    "bunx": "^0.1.0",
+    "diff": "^5.1.0",
+    "hono": "^3.12.9"
+  }
+}

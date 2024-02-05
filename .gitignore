@@ -1,0 +1,5 @@
+helix-gpt.js
+dist
+.env
+node_modules
+.helix

@@ -1,0 +1,4 @@
+node_modules
+bun.lockb
+go.mod
+go.sum

@@ -1,0 +1,137 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: #535bf2;
+}
+
+.ace_scrollbar {
+  display: none !important
+}
+
+.json-container {
+  background: transparent !important;
+  color: white !important;
+  font-size: 20px !important;
+}
+
+.json-key {
+  color: #999999 !important
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+
+#container {
+  display: flex
+}
+
+#header {
+  height: 10vh;
+  width: 100vw;
+  display: flex;
+  color: white;
+  justify-content: center;
+  align-items: center
+}
+
+h1,
+label {
+  margin: 0 20px
+}
+
+#index {
+  .editor {
+    width: 50vw;
+    height: 90vh;
+    float: left
+  }
+}
+
+.d2h-file-side-diff {
+  overflow: hidden !important
+}
+
+.d2h-wrapper {
+  height: 100vh !important
+}
+
+.d2h-file-list-wrapper {
+  display: none !important
+}
+
+.d2h-code-linenumber,
+.d2h-code-side-linenumber {
+  position: relative !important
+}
+
+#diff {
+  overflow: auto
+}
+
+#debugger {
+  ul {
+    list-style: none
+  }
+
+  #log-container {
+    background: rgba(0, 0, 0, 0.3);
+    overflow: auto
+  }
+
+  .main-section {
+    display: flex;
+    flex-direction: column;
+    width: 66vw;
+    height: 100vh
+  }
+
+  .editor-section {
+    display: flex;
+    width: 66vw;
+    height: 100vh
+  }
+
+  .log-section {
+    display: flex;
+    flex-direction: column;
+    width: 33vw;
+    height: 100vh
+  }
+
+  .editor {
+    width: 33vw;
+    height: 49vh;
+    overflow: auto
+  }
+
+  #diff {
+    height: 100vh;
+    width: 66vw;
+  }
+
+}

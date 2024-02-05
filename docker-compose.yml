@@ -1,0 +1,84 @@
+version: "3.7"
+
+services:
+  playground-frontend:
+    container_name: ts2go_playground-frontend
+    env_file: .env
+    build:
+      dockerfile: ./Dockerfile
+    command: bash -c "bun run dev:playground:frontend"
+    restart: unless-stopped
+    working_dir: /app
+    networks:
+      - ts2go
+    logging:
+      options:
+        max-size: "10m"
+        max-file: "3"
+    volumes:
+      - ./:/app
+  playground-server:
+    container_name: ts2go_playground-server
+    env_file: .env
+    build:
+      dockerfile: ./Dockerfile
+    command: bash -c "bun run dev:playground:server"
+    restart: unless-stopped
+    working_dir: /app
+    networks:
+      - ts2go
+    logging:
+      options:
+        max-size: "10m"
+        max-file: "3"
+    volumes:
+      - ./:/app
+  wasm:
+    container_name: ts2go_wasm
+    tty: true
+    env_file: .env
+    build:
+      dockerfile: ./Dockerfile
+    command: bash -c "bun run dev:go"
+    restart: unless-stopped
+    working_dir: /app
+    logging:
+      options:
+        max-size: "10m"
+        max-file: "3"
+    volumes:
+      - ./:/app
+  dev:
+    container_name: ts2go_dev
+    env_file: .env
+    build:
+      dockerfile: ./Dockerfile
+    command: bash -c "sleep 9999999s"
+    restart: unless-stopped
+    working_dir: /app
+    logging:
+      options:
+        max-size: "10m"
+        max-file: "3"
+    volumes:
+      - ./:/app
+  caddy:
+    image: caddy:latest
+    restart: unless-stopped
+    container_name: ts2go_caddy
+    env_file: .env
+    networks:
+      - ts2go
+    logging:
+      options:
+        max-size: "10m"
+        max-file: "3"
+    cap_add:
+      - NET_ADMIN
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile
+networks:
+  ts2go:
+    driver: bridge

@@ -1,0 +1,10 @@
+{$PUBLIC_URL}:8000 {
+  encode gzip
+
+  handle_path /* {
+    reverse_proxy playground-frontend:80
+  }
+  handle_path /api/* {
+    reverse_proxy playground-server:80
+  }
+}
