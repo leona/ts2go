@@ -2,7 +2,14 @@
 
 Experimential TypeScript to Go transpiler. Supports an extremely limited subset of TypeScript features.
 
+Playground
 https://ts2go.nx.ie
+
+![](https://github.com/leona/ts2go/blob/master/assets/playground.png?raw=true)
+
+Debugger (`docker-compose up`)
+
+![](https://github.com/leona/ts2go/blob/master/assets/debugger.png?raw=true)
 
 ## Why?
 
