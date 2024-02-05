@@ -2,18 +2,20 @@
 
 Experimential TypeScript to Go transpiler. Supports an extremely limited subset of TypeScript features.
 
+https://ts2go.nx.ie
+
 ## Why?
 
-This is just a crazy experiment to learn more about ASTs. Should you use this? Probably not. But I've found it a fun experiment, and it sort of works.
+This is just a crazy experiment to learn more about ASTs. Should you use this? Probably not. But I've found it a fun experiment.
 
-My goals for this are not to reach Go performance with Typescript, or to have complete 1-1 support, but just to be able to write simple applications (CLI tools etc.) in TypeScript and output a small, portable and low footprint binary.
+My goal for this was not to reach Go performance with Typescript, or to have 1-1 support, but just to be able to write simple applications (CLI tools etc.) in TypeScript and output a small, portable and low footprint binary.
 
 
 ### Roadmap
 - disable any keyword and force strict typing
 - enums
 - classes
-- type inference
+- impoved type inference
 - support callbacks
 - async await
 - complete fetch, console, Date & process support
@@ -26,7 +28,7 @@ My goals for this are not to reach Go performance with Typescript, or to have co
 - support not capitalising variable names within a scoped function
 - debug wrapper to print TS lines or comments
 - error handling for unsupported features
-- imports/modules
+- imports
 - declaring multiple variables at once e.g. const test, test2 = "test"
 - computed properties such as length
 - pass by reference everywhere
