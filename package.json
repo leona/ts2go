@@ -6,6 +6,7 @@
     "dev:playground:frontend": "cd playground;bun run dev:frontend",
     "dev:playground:server": "cd playground;bun run dev:server",
     "dev:go": "cd src && GOOS=js GOARCH=wasm gow build -o /app/playground/public/playground.wasm playground.go",
+    "build:playground": "cd playground;npm run build",
     "ast": "asty json2go -input /app/input.json -output /app/src/output.go && cat /app/src/output.go && cd src && echo '' && go run /app/src/output.go"
   },
   "devDependencies": {

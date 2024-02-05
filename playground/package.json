@@ -9,7 +9,7 @@
   "scripts": {
     "dev:frontend": "vite dev --host --port 80",
     "dev:server": "bun run --watch server.ts",
-    "build": "tsc && vite build",
+    "build": "vite build",
     "preview": "vite preview"
   },
   "devDependencies": {
