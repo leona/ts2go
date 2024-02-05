@@ -1,6 +1,6 @@
 # ts2go
 
-Experimential TypeScript to Go transpiler. Supports an extremely limited subset of TypeScript features.
+Experimental TypeScript to Go transpiler. Supports an extremely limited subset of TypeScript features.
 
 Playground
 https://ts2go.pages.dev/
