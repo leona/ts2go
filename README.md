@@ -18,7 +18,7 @@ This is just a crazy experiment to learn more about ASTs. Should you use this? P
 My goal for this was not to reach Go performance with Typescript, or to have 1-1 support, but just to be able to write simple applications (CLI tools etc.) in TypeScript and output a small, portable and low footprint binary.
 
 
-### Roadmap
+### Not yet supported
 - disable any keyword and force strict typing
 - enums
 - classes
